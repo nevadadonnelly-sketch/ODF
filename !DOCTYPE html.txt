@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODF Client Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+            padding-left: 2.5rem; 
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 0.9rem;
+            top: 2rem;
+            width: 4px;
+            height: 100%;
+            background-color: #e5e7eb; 
+        }
+        .info-box {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .info-box .content {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .info-box.active .content {
+            display: block;
+            max-height: 1000px; /* Adjust as needed */
+        }
+        .checklist-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+        .checklist-item span {
+            margin-right: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight text-gray-900">Welcome to ODF!</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">A step-by-step guide to getting started with On Demand Fulfillment. We’re excited to have you on board! Use this checklist to track your progress and see what’s coming next.</p>
+        </header>
+
+        <main class="max-w-4xl mx-auto">
+            <div class="timeline">
+                <!-- Step 1: Product Review -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-blue-500 text-white font-bold">1</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Step 1: Product Review</h2>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6" onclick="toggleInfoBox(this)">
+                            <h3 class="text-xl font-bold mb-2">Product Checklist</h3>
+                            <div class="content mt-4 text-gray-600">
+                                <div class="checklist-item"><span>✅</span><p>SKU count confirmed (up to 25 active SKUs allowed)</p></div>
+                                <div class="checklist-item"><span>☐</span><p>Product labels approved and print-ready</p></div>
+                                <div class="checklist-item"><span>☐</span><p>Labels use standard BOPP material</p></div>
+                                <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                                    <p>🎨 **Want premium labels?** We offer matte, gloss, and metallic options—just let us know when you are ready to upgrade!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Label Design & Proofing -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-blue-500 text-white font-bold">2</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Step 2: Label Design & Proofing</h2>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6" onclick="toggleInfoBox(this)">
+                            <h3 class="text-xl font-bold mb-2">Design & Approval Process</h3>
+                            <div class="content mt-4 text-gray-600">
+                                <div class="checklist-item"><span>☐</span><p><strong>Label Design:</strong> Work with your own designer or use our in-house design team</p></div>
+                                <div class="checklist-item"><span>☐</span><p><strong>3D Renders & Logo Design:</strong> Optional support available from our design team</p></div>
+                                <div class="checklist-item"><span>☐</span><p><strong>Proofing Process:</strong> All labels are reviewed by our Proofing & 3rd Party QA Teams</p></div>
+                                <div class="mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-r-lg">
+                                    <p>⚠️ Ensure all labels meet compliance standards before final approval and printing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Inventory Management -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-gray-400 text-white font-bold">3</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-500 mb-4">Step 3: Inventory Management</h2>
+                     <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6" onclick="toggleInfoBox(this)">
+                            <h3 class="text-xl font-bold mb-2">Planning for Success</h3>
+                            <div class="content mt-4 text-gray-600">
+                                <div class="checklist-item"><span>☐</span><p>Inventory expectations reviewed</p></div>
+                                <p class="font-semibold mb-2">You’ve informed us of:</p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>Upcoming marketing campaigns</li>
+                                    <li>Anticipated volume spikes</li>
+                                    <li>New product/SKU launches</li>
+                                    <li>Projected sales for the next 60 days</li>
+                                </ul>
+                                <div class="mt-4 p-4 bg-green-50 border-l-4 border-green-400 text-green-800 rounded-r-lg">
+                                    <p>📣 Think of us as part of your team—early communication helps us plan better for your success!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Step 4: Integration Setup -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-gray-400 text-white font-bold">4</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-500 mb-4">Step 4: Integration Setup</h2>
+                     <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6" onclick="toggleInfoBox(this)">
+                            <h3 class="text-xl font-bold mb-2">Connecting Your Store</h3>
+                            <div class="content mt-4 text-gray-600">
+                                <div class="checklist-item"><span>☐</span><p>Integration Instructions Sent</p></div>
+                                <div class="checklist-item"><span>☐</span><p>Certifications Provided: COAs, Manufacturer Certifications, etc.</p></div>
+                                <div class="checklist-item"><span>☐</span><p>Integration Complete: Your store is connected and ready for fulfillment</p></div>
+                                <div class="mt-4 p-4 bg-red-50 border-l-4 border-red-400 text-red-800 rounded-r-lg">
+                                    <p>❗ Make sure all products are mapped correctly to their ODF SKUs to avoid delays.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Wrapping Up & Feedback -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-gray-400 text-white font-bold">5</div>
+                    <h2 class="text-2xl font-bold text-gray-500 mb-4">Step 5: Wrapping Up & Feedback</h2>
+                     <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6" onclick="toggleInfoBox(this)">
+                            <h3 class="text-xl font-bold mb-2">Final Steps</h3>
+                            <div class="content mt-4 text-gray-600">
+                                <div class="checklist-item"><span>☐</span><p>Final onboarding call completed</p></div>
+                                <div class="checklist-item"><span>☐</span><p>Recap email sent</p></div>
+                                <div class="checklist-item"><span>☐</span><p>Google Review requested (optional, but appreciated!)</p></div>
+                                 <div class="mt-4 p-4 bg-gray-100 border-l-4 border-gray-400 text-gray-800 rounded-r-lg">
+                                    <p>💬 Not ready to review yet? That’s okay—we’ll follow up next month.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="max-w-4xl mx-auto mt-12">
+             <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">🧑‍💻 After Onboarding: Meet Your Support Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">📧 Support Team</h3>
+                        <a href="mailto:support@ondemandfulfillment.com" class="text-blue-500 hover:underline">support@ondemandfulfillment.com</a>
+                        <p class="text-gray-600 mt-2">For questions about order issues, adding SKUs, or bulk/canceled orders.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">💳 Billing Team</h3>
+                        <a href="mailto:billing@ondemandfulfillment.com" class="text-blue-500 hover:underline">billing@ondemandfulfillment.com</a>
+                        <p class="text-gray-600 mt-2">For help with invoices, payment updates, or subscription questions.</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto mt-8">
+             <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">💡 FAQ: Billing & Subscription</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-bold">🗓️ When are invoices sent?</h4>
+                        <p class="text-gray-600">Weekly—typically Monday or Tuesday.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">💳 When is payment due?</h4>
+                        <p class="text-gray-600">Payments are due by Friday each week. If unpaid, your card will be charged automatically.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">🚫 What if I miss a payment?</h4>
+                        <p class="text-gray-600">Your account will be paused, and orders will not be fulfilled until payment is received.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">⏸️ Can I pause my account?</h4>
+                        <p class="text-gray-600">Yes! For $49.99/month. You will be prorated the full subscription rate minus your paused fee once reactivated. A $199 reactivation fee applies if you cancel and return.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">📂 Where can I view invoices?</h4>
+                        <p class="text-gray-600">Access and manage your invoices through your Billing Portal. Your invite will be sent via email during your final onboarding call.</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <footer class="text-center mt-12 mb-8">
+            <h2 class="text-4xl font-black text-gray-900">🎉 You’re All Set!</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Now that your onboarding is complete, we're ready to support you every step of the way. We’re thrilled to be your fulfillment partner—let’s grow together!</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleInfoBox(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
