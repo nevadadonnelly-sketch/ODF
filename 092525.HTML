@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODF Client Onboarding Checklist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+            padding-left: 2.5rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 0.9rem;
+            top: 2rem;
+            width: 4px;
+            height: 100%;
+            background-color: #e5e7eb;
+        }
+        .info-box {
+            transition: all 0.3s ease;
+        }
+        .info-box .content {
+            display: block;
+            max-height: 1000px; /* Adjust as needed */
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+        .checklist-item span {
+            margin-right: 0.75rem;
+        }
+        .link-button {
+            display: block;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+            flex: 1;
+        }
+        .link-button:hover {
+            background-color: #e5e7eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight text-gray-900">Welcome to ODF!</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Your Client Onboarding Checklist</p>
+            <p class="mt-2 max-w-2xl mx-auto text-lg text-gray-600">Everything you need to get started with On Demand Fulfillment. We’re thrilled to have you on board! This guide walks you through your onboarding journey with step-by-step instructions, estimated timelines, and action items. Let’s dive in!</p>
+        </header>
+        
+        <main class="max-w-4xl mx-auto">
+            <div class="timeline">
+                <!-- Step 1: Getting Started -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-blue-500 text-white font-bold">1</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">🚀 Getting Started: Meet Your Onboarding Team</h2>
+                    <p class="text-gray-500 text-sm mb-4">Estimated Time: Typically completed the day you're introduced to the team</p>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-bold mb-2">Onboarding Checklist</h3>
+                            <div class="content mt-4 text-gray-600">
+                                <div class="checklist-item">
+                                    <span>☐</span>
+                                    <p><b>Welcome & ODF SKU Assignment</b><br>Your onboarding specialist will introduce you to ODF’s processes and review your completed Intake Form to assign SKUs for your product lineup. If there are any updates or changes to your product list, they’ll confirm those with you directly.</p>
+                                </div>
+                                <div class="checklist-item mt-4">
+                                    <span>☐</span>
+                                    <p><b>Design Services (Optional)</b><br>If you selected any ODF Design Team services on your Intake Form, your onboarding specialist will:</p>
+                                </div>
+                                <ul class="list-disc list-inside ml-8 text-gray-600">
+                                    <li>Generate a design service quote for your review</li>
+                                    <li>Provide a design questionnaire to collect branding and product details</li>
+                                </ul>
+                                <p class="mt-4">These services are completely optional — if you decide not to move forward with design support, just let your onboarding rep know. We understand things can change and are happy to adjust as needed.</p>
+                                <div class="checklist-item mt-4">
+                                    <span>☐</span>
+                                    <p><b>Kickoff Discussion</b></p>
+                                </div>
+                                <ul class="list-disc list-inside ml-8 text-gray-600">
+                                    <li>Discuss goals, launch timelines, product list, and next steps</li>
+                                    <li>Begin aligning internal team members (e.g., design,)</li>
+                                </ul>
+                                <div class="mt-4 p-4 bg-gray-100 border-l-4 border-gray-400 text-gray-800 rounded-r-lg">
+                                    <h4 class="font-bold">📌 What You’ll Walk Away With:</h4>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>Assigned ODF SKUs</li>
+                                        <li>Optional design services (if selected)</li>
+                                        <li>Your main point of contact moving forward</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Label Design & Proofing -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-blue-500 text-white font-bold">2</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">🎨 Label Design & Proofing (Middle of the Process)</h2>
+                    <p class="text-gray-500 text-sm mb-4">Estimated Time: Typically 2–4 weeks</p>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-bold mb-2">Design & Approval Process</h3>
+                            <div class="content mt-4 text-gray-600 space-y-4">
+                                <div class="checklist-item"><span>☐</span><p><b>Access to Label Templates</b><br>All clients are provided access to our label templates to begin the design process:<br>🔗 <a href="http://www.ondemandfulfillment.com/customer-label-templates/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Label Templates</a><br>🔐 Password: <b>privatelabel</b></p></div>
+                                <div class="checklist-item">
+                                    <span>☐</span>
+                                    <p><b>Label Design, Renders & Logo Creation</b><br>Clients may either:</p>
+                                </div>
+                                <ul class="list-disc list-inside ml-8 text-gray-600">
+                                    <li>Collaborate with our in-house Design Team for custom label creation, 3D renders, and logo design</li>
+                                    <li>Or provide their own outsourced label designs using the resources below for guidance</li>
+                                </ul>
+                                <p><b>For Outsourced Labels:</b> There is a $5.00 Proofing Fee per label for outsourced designs to cover QA review. Your onboarding specialist will coordinate with you directly to collect and submit these to our Proofing Team.</p>
+                                <h4 class="font-bold">Helpful Resources (for all clients):</h4>
+                                <div class="flex flex-col md:flex-row gap-2">
+                                    <a href="https://ondemandfulfillment.zohodesk.com/portal/en/kb/on-demand-fulfillment-knowledge-base/about/labels" class="link-button" target="_blank" rel="noopener noreferrer">Labels FAQ</a>
+                                    <a href="https://docs.google.com/spreadsheets/d/1MCDF-tDMbDbaf8fPgQLetTjAJjcefMg9YUGZoqNTQaY/edit?usp=sharing" class="link-button" target="_blank" rel="noopener noreferrer">Product Bottle Info Sheet</a>
+				    <a href="https://docs.google.com/spreadsheets/d/1zOJ7R0xKuHOXSokmig7ph8l5LA6nLBO3KhY-3A0ABpY/edit?usp=sharing" class="link-button" target="_blank" rel="noopener noreferrer">Pre-Approved Label Claims</a>
+                                    <a href="https://docs.google.com/spreadsheets/d/1gWzHjrRK5h85CB0gSiQcGt_2tk0XS8AGt62H8_ozvGI/edit?usp=sharing" class="link-button" target="_blank" rel="noopener noreferrer">Supplement Claims</a>
+                                </div>
+                                <div class="checklist-item mt-8"><span>☐</span><p><b>Proofing & QA Review</b><br>Every label — whether designed by you or by ODF — must go through a full review by our Proofing Team and a third-party QA reviewer prior to approval for printing.</p></div>
+                                <div class="p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-r-lg">
+                                    <p>⚠️ <b>Important:</b> This step ensures regulatory compliance and prevents issues at launch. To avoid delays, we recommend submitting designs as early as possible.</p>
+                                </div>
+                                <div class="pt-4">
+                                    <h4 class="font-bold">On-Demand Label Printing (Quick Overview)</h4>
+                                    <p>ODF offers two label options to meet your brand's needs:</p>
+                                    <ul class="list-disc list-inside ml-8 text-gray-600">
+                                        <li><b>Standard In-House Labels</b> – Printed on-demand with durable BOPP material. A great fit for startups or brands that need quick, flexible production without bulk orders.</li>
+                                        <li><b>HQ (High Quality) Labels</b> – Outsourced in bulk with a premium laminated gloss finish. Ideal for established brands seeking a polished, smudge-proof look.</li>
+                                    </ul>
+                                    <p class="mt-2">ODF labels are printed using Epson C8000u printers, providing a more polished appearance across all label sizes</p>
+                                    <a href="https://ondemandfulfillment.zohodesk.com/portal/en/kb/articles/hq-labels-printing-material-guide" class="link-button mt-4" target="_blank" rel="noopener noreferrer">👉 View Full Label Guide</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Integration & Inventory -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-blue-500 text-white font-bold">3</div>
+                    <div class="timeline-line"></div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">🔗 Integration & Inventory (Final Stages of Onboarding)</h2>
+                    <p class="text-gray-500 text-sm mb-4">Estimated Time: Typically 1–4 weeks</p>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-bold mb-2">Integration and Set Up</h3>
+                            <div class="content mt-4 text-gray-600 space-y-4">
+                                <p>💡 <b>Note:</b> During this stage, clients are typically working on connecting store platforms like Amazon, Walmart, or Shopify. Since setup times vary based on platform requirements and approvals, we strongly recommend starting this step as early as possible.</p>
+                                <div class="checklist-item"><span>☐</span><p><b>Inventory Expectations Shared</b><br>Let us know about:</p></div>
+                                <ul class="list-disc list-inside ml-8 text-gray-600">
+                                    <li>Marketing campaigns or volume spikes</li>
+                                    <li>New product launches</li>
+                                    <li>Sales forecasts (next 30–90 days)</li>
+                                </ul>
+                                <div class="p-4 bg-green-50 border-l-4 border-green-400 text-green-800 rounded-r-lg">
+                                    <p>📣 <b>Pro Tip:</b> Advance notice helps us support your launches and campaigns more efficiently.</p>
+                                </div>
+                                <div class="checklist-item"><span>☐</span><p><b>Platform Integration</b><br>You’ll receive integration instructions tailored to your specific platform (e.g., Shopify, Amazon, Walmart, etc.). These instructions walk you through how to connect your store to ODF so we can begin syncing and fulfilling your orders.</p></div>
+                                <a href="https://ondemandfulfillment.zohodesk.com/portal/en/kb/on-demand-fulfillment-knowledge-base/about/platform-integrations" class="link-button" target="_blank" rel="noopener noreferrer">Platform Integration Resources</a>
+                                <div class="checklist-item"><span>☐</span><p><b>Certifications Shared</b><br>Clients typically request the following documents during this stage; however, depending on where you are in your store platform setup, you can request these earlier if needed:</p></div>
+                                <ul class="list-disc list-inside ml-8 text-gray-600">
+                                    <li>Certificates of Analysis (COAs)</li>
+                                    <li>Manufacturer Certifications</li>
+                                </ul>
+                                <div class="checklist-item"><span>☐</span><p><b>Test Order Complete</b><br>Once clients are integrated with our shipping software, they’re usually ready to start shipping orders. We typically ask clients to submit a test order following the instructions below. This can be done either before or during your final onboarding call to confirm everything is functioning correctly.</p></div>
+                                <a href="https://drive.google.com/file/d/1qTUX4orXNU4lj6V6BEAxp9vAI2PoQXLL/view?usp=sharing" class="link-button" target="_blank" rel="noopener noreferrer">Test Order Instructions</a>
+                                <div class="p-4 bg-red-50 border-l-4 border-red-400 text-red-800 rounded-r-lg">
+                                    <p>❗️ <b>Reminder:</b> Ensure all products are mapped to their assigned ODF SKUs before launching to avoid order delays.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Wrap-up Section -->
+                <div class="timeline-item">
+                    <div class="timeline-marker bg-blue-500 text-white font-bold">4</div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">✅ Final Wrap-Up: Onboarding Call & Ongoing Support</h2>
+                    <p class="text-gray-500 text-sm mb-4">At this stage, you’re typically fully onboarded and ready to start shipping orders for fulfillment.</p>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="info-box bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-bold mb-2">Final Steps</h3>
+                            <div class="content mt-4 text-gray-600 space-y-4">
+                                <p>During your final onboarding call, your Onboarding Specialist will:</p>
+                                <ul class="list-disc list-inside ml-8 text-gray-600">
+                                    <li>Review your current labels to ensure they’re saved correctly on file</li>
+                                    <li>Review your test order to confirm everything is working smoothly</li>
+                                    <li>Cover important details to set you up for success</li>
+                                </ul>
+                                <p>Don’t worry there’s a lot to cover, but we’ll guide you through everything step-by-step.<br>After the call, you’ll receive a recap email with helpful links, contacts, and next steps to keep things running smoothly.</p>
+                                <a href="https://calendar.app.google/yFgLeLyPsEdGsBAc7" class="link-button" target="_blank" rel="noopener noreferrer">Schedule Your Final Call HERE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="max-w-4xl mx-auto mt-12">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">Meet Your Support Team</h2>
+                <p class="text-center text-gray-600 mb-6">After onboarding, your main point of contact shifts to our Support Team. They’re here to assist with everything your Onboarding Specialist helped you with—and more. With a larger team in place, we’re able to address requests faster and more efficiently.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">For Order Support:</h3>
+                        <a href="mailto:support@ondemandfulfillment.com" class="text-blue-500 hover:underline">📧 support@ondemandfulfillment.com</a>
+                        <p class="font-bold mt-2">We can assist with:</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600">
+                            <li>Order delays or issues</li>
+                            <li>Adding or updating SKUs and platforms</li>
+                            <li>Bulk, held, or canceled orders</li>
+                            <li>Connecting you with our Proofing or Design Team for future labels</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Billing Support & Account Options:</h3>
+                        <p>For any billing-related questions, our team is here to help:</p>
+                        <a href="mailto:billing@ondemandfulfillment.com" class="text-blue-500 hover:underline">📧 billing@ondemandfulfillment.com</a>
+                        <p class="font-bold mt-2">We can assist with:</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600">
+                            <li>Weekly invoices & payments</li>
+                            <li>Updating your billing details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto mt-8">
+            <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Fulfillment Schedule</h2>
+                <p class="text-gray-600">Monday–Friday</p>
+                <p class="text-gray-600">Imports at 5 AM & 11 AM MST</p>
+            </div>
+        </section>
+        
+        <section class="max-w-4xl mx-auto mt-8">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">💳 Billing & Pricing FAQ</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-bold">How long will I have Tier 3 pricing after onboarding?</h4>
+                        <p class="text-gray-600">You’ll receive Tier 3 pricing for 90 days following your final onboarding call.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">How long will I have a waived subscription?</h4>
+                        <p class="text-gray-600">All onboarding clients have their monthly subscription fee waived for 90 days to help ease the setup process.</p>
+                        <div class="mt-4 p-4 bg-gray-100 border-l-4 border-gray-400 text-gray-800 rounded-r-lg">
+                            <p class="text-sm">Please note: If your final onboarding call occurs before the 90-day mark a prorated subscription invoice will be issued at that time.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">When are invoices sent?</h4>
+                        <p class="text-gray-600">Invoices are generated weekly, typically on Monday or Tuesday.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">When is payment due?</h4>
+                        <p class="text-gray-600">All payments are due by Friday of the same week.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">What happens if I miss a payment?</h4>
+                        <p class="text-gray-600">Your account will be paused, and no orders will be fulfilled until payment is received.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Where can I view invoices and manage billing?</h4>
+                        <p class="text-gray-600">Use your Billing Portal to:</p>
+                        <ul class="list-disc list-inside ml-8 text-gray-600">
+                            <li>View and download invoices</li>
+                            <li>Update your payment method</li>
+                            <li>Review billing history</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Don’t have access to the Billing Portal?</h4>
+                        <p class="text-gray-600">Email us at <a href="mailto:billing@ondemandfulfillment.com" class="text-blue-500 hover:underline">billing@ondemandfulfillment.com</a>, and we’ll get you set up right away.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto mt-8">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">💡 Quick Reference Links</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-bold">ODF Set Up Guide</h4>
+                        <p class="text-gray-600">Access your ODF setup guide <a href="https://drive.google.com/file/d/1rBAfrilSPQInVMQRrdkX1axvPxX6g5tS/view?usp=sharing" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Product and Shipping Pricing</h4>
+                        <p class="text-gray-600">Pricing and shipping costs can be found <a href="https://ondemandfulfillment.zohodesk.com/portal/en/kb/articles/product-pricing" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Amazon NSF Testing Requirements</h4>
+                        <p class="text-gray-600">Applies to: Weight Loss, Sexual Health, Sports Nutrition. The testing requirements can be found <a href="https://drive.google.com/file/d/1evcoCaZguvMsHRZFel46mgsrHWnSa7KQ/view?usp=sharing" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Inventory Report</h4>
+                        <p class="text-gray-600">Current ODF Inventory can be found <a href="https://docs.google.com/spreadsheets/d/17X_7f0mtwM_X2Ml1VOd6g6NCVPLHA7qjsOK1XCTcJmQ/edit?usp=sharing" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">📚 ODF Knowledge Base Help Center</h4>
+                        <p class="text-gray-600">Access helpful articles and FAQs in our help center <a href="https://ondemandfulfillment.zohodesk.com/portal/en/kb/on-demand-fulfillment-knowledge-base/about" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">HERE</a>.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Webinar Library</h4>
+                        <p class="text-gray-600">ODF has launched a new webinar series designed to assist new clients with onboarding and navigating our services. These sessions cover essential topics, provide expert insights, and offer helpful tips to get you started smoothly. If you're interested, feel free to check it out and sign up <a href="https://www.ondemandfulfillment.com/home/webinar-sign-up/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="max-w-4xl mx-auto mt-8">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">🔄 Flexible Account Options</h2>
+                <p class="text-gray-600">We understand that things come up and business needs can shift. That’s why we offer flexible options:</p>
+                <h4 class="font-bold mt-4">🔄 Pause Your Account – $49.99/month</h4>
+                <ul class="list-disc list-inside ml-4 text-gray-600">
+                    <li>Instead of your regular $149.99 subscription fee, you can choose to pause your account at a reduced rate.</li>
+                    <li>You’ll continue receiving product updates</li>
+                    <li>Your platform integration remains active</li>
+                    <li>Your labels will still be monitored for compliance</li>
+                </ul>
+                <h4 class="font-bold mt-4">🚫 Cancel & Return Later – $199 Reactivation Fee</h4>
+                <p class="text-gray-600">If you choose to fully cancel and decide to return later, no problem! Returning clients just pay a $199 reactivation fee. Our team will:</p>
+                <ul class="list-disc list-inside ml-4 text-gray-600">
+                    <li>Reconnect and test your platform integrations</li>
+                    <li>Review your labels for compliance</li>
+                    <li>Catch you up on any recent updates to ensure a smooth restart</li>
+                </ul>
+            </div>
+        </section>
+        
+        <footer class="text-center mt-12 mb-8">
+            <h2 class="text-4xl font-black text-gray-900">🎉 You’re All Set!</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Your onboarding is now complete—welcome to the ODF family! We’re excited to support your business and provide smooth, reliable fulfillment. If you ever need assistance, don’t hesitate to reach out. If you enjoyed your experience, we’d love to hear from you!</p>
+            <a href="https://g.page/r/CZmT1EkhG3ugEAE/review" class="link-button mt-4" target="_blank" rel="noopener noreferrer">LEAVE GOOGLE REVIEW HERE</a>
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleInfoBox(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
